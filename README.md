@@ -24,7 +24,7 @@
 
 7.  **Condições de Parada:** A simulação da máquina `M` pela MTU irá parar (halting) se uma das seguintes condições for atendida:
     * A máquina `M` atinge seu único estado final, `qf`.
-    * A máquina `M` atinge um estado (não-final) a partir do qual não existe nenhuma transição definida para o símbolo que está sendo lido na fita.
+    * A máquina `M` atinge um estado (não-final) a partir do qual não existe nenhuma transição definida para o símbolo que está sendo lido na fita. 
 
 8.  ***Convenção de Saída (Aceitação e Rejeição)***: O resultado da computação é indicado pela MTU na fita após a parada de `M`.
     * **Aceitação:** Se `M` para no estado final `qf`, a MTU deve escrever a constante **`#A`** na fita, a partir da primeira célula em branco à direita da palavra.
@@ -33,7 +33,7 @@
 9.  **Representação da String de Entrada para a MTU:** A string completa a ser fornecida para a MTU é a justaposição da representação de todas as suas transições (separadas por `#`), seguida pelo separador `$` e a palavra de entrada `w` (uma sequência de símbolos).
 
 10. **Exemplos de uso:**
-    1.  `q1a1a11Rq11#q11a11a111Lqf$sa1a11`: Palavra rejeitada
-    2.  `q1ssRq1#q1a1a1Rq11#q11a11a11Rq111#q111bbRqf$sa1a11`: Palavra aceita
-    3.  `q1ssRq1#q1a1a1Rq11#q11a11a11Rq111#q111bbRqf$sa1a1`: Palavra rejeitada
-    4.  `q1ssRq1#q1a1a11Rq1#q1a11a11Rq1#q1bbRqf$sa1a11a1`: Palavra aceita
+    1.  `q1a1a11Rq11#q11a11a111Lqf$sa1a11`: Entrada rejeitada
+    2.  `q1ssRq1#q1a1a1Rq11#q11a11a11Rq111#q111bbRqf$sa1a11`: Entrada aceita
+    3.  `q1ssRq1#q1a1a1Rq11#q11a11a11Rq111#q111bbRqf$sa1a1`: Entrada rejeitada
+    4.  `q1ssRq1#q1a1a11Rq1#q1a11a11Rq1#q1bbRqf$sa1a11a1`: Entrada aceita
