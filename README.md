@@ -31,8 +31,13 @@
     * **Rejeição:** Se `M` para por não haver uma transição possível, a MTU deve escrever **`#R`** na mesma posição.
 
 9.  **Representação da String de Entrada para a MTU:** A string completa a ser fornecida para a MTU é a justaposição da representação de todas as suas transições (separadas por `#`), seguida pelo separador `$` e a palavra de entrada `w` (uma sequência de símbolos).
+   
+10. **Fitas:** 
+    1. **Fita 1:** Conteúdo atual da fita da `MTU`
+    2. **Fita 2:** Codificação da `MT`
+    3. **Fita 3:** Estado atual da `MT`
 
-10. **Exemplos de uso:**
+11. **Exemplos de uso:**
     1.  `q1a1a11Rq11#q11a11a111Lqf$sa1a11`: Entrada rejeitada
     2.  `q1ssRq1#q1a1a1Rq11#q11a11a11Rq111#q111bbRqf$sa1a11`: Entrada aceita
     3.  `q1ssRq1#q1a1a1Rq11#q11a11a11Rq111#q111bbRqf$sa1a1`: Entrada rejeitada
