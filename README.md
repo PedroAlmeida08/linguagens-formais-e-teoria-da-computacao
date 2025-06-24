@@ -38,7 +38,8 @@
     3. **Fita 3:** Estado atual da `MT`
 
 11. **Exemplos de uso:**
-    1.  `q1a1a11Rq11#q11a11a111Lqf$sa1a11`: Entrada rejeitada
-    2.  `q1ssRq1#q1a1a1Rq11#q11a11a11Rq111#q111bbRqf$sa1a11`: Entrada aceita
-    3.  `q1ssRq1#q1a1a1Rq11#q11a11a11Rq111#q111bbRqf$sa1a1`: Entrada rejeitada
-    4.  `q1ssRq1#q1a1a11Rq1#q1a11a11Rq1#q1bbRqf$sa1a11a1`: Entrada aceita
+    1.  `q1a1a11Rq11#q11a11a111Lqf#q11a1a11Rq1$`: Palavra vazia (Rejeitada)
+    2.  `q1a1a11Rq11#q11a11a111Lqf#q11a1a11Rq1$a1`: Após leitura da  palavra, para em estado não final (Rejeitada)
+    3. `q1a1a11Rq11#q11a11a111Lqf#q11a1a11Rq1$a1a11`: Após leitura da  palavra, para em estado final (Aceita)
+    4.`q11a1a11Rq1#q1a1a11Rq11#q11a11a111Lqf$a1a11`: Mesma máquina e palavra do exemplo 3, mas começando a descrição da máquina em um estado que não seja o inicial. (Aceita)
+	5.`q11a11a111Lqf#q11a1a11Rq1#q1a1a11Rq11$a11`: Ação que não possui transição do estado inicial. (Rejeitada)
