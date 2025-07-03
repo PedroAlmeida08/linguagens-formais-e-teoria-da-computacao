@@ -1,3 +1,12 @@
+- Inicialmente a implementação havia sido feita utilizando uma máquina de Turing com múltiplas fitas.
+- A implementação atual utiliza uma fita única e funciona conforme descrito no tópico "`10 - Fita`".
+- Na implementação anterior também havia um erro grave em que a `MTU` não retornava a fita ao início após realizar uma transição. Isso foi corrigido na versão atual.
+- A implementação atual foi executada utilizando entradas diversas a fim de esgotar as possibilidades de execução com base no escopo do trabalho. Algumas dessas entradas podem ser encontradas em "`13 - Exemplos de Uso`".
+
+- A máquina se apresentou robusta tendo o comportamento esperado diante de todas as situações a que foi submetida.
+
+- A descrição do projeto, da máquina bem como sua implementação estão descritos a seguir:
+ 
 1.  **Objetivo do Projeto:** Implementar uma **Máquina de Turing Universal (MTU)** determinística. A MTU recebe como entrada a descrição de outra Máquina de Turing `M` e uma palavra `w`, e então simula a execução de `M` com a entrada `w`.
 
 2.  **Codificação da Entrada para a MTU:** A entrada completa para a MTU consiste na função de transição da máquina `M` (codificada como uma sequência de transições), seguida por um separador `$` e, por fim, a palavra de entrada `w` para a máquina `M`.
@@ -32,7 +41,7 @@
 9.  **Representação da String de Entrada para a MTU:** A string completa a ser fornecida para a MTU é a justaposição da representação de todas as suas transições (separadas por `#`), seguida pelo separador `$` e a palavra de entrada `w` (uma sequência de símbolos).
    
 10. **Fita:** 
-    A fita foi codificada de forma a simular 4 fitas, seguindo o seguinte formato: **(Entrada da MTU)&(Estado Atual)%(Símbolo Lido)@(Símbolos Escritos Até o Momento)**. Os parênteses foram utilizados apenas para fins ilustrativos e não são utilizados execução dessa MTU.
+    A fita da `MTU` foi codificada de forma a simular 4 fitas, seguindo o seguinte formato: **(Entrada da MTU)&(Estado Atual)%(Símbolo Lido)@(Símbolos Escritos Até o Momento)**. Os parênteses foram utilizados apenas para fins ilustrativos e não são utilizados execução dessa MTU.
 	Por exemplo: 
 	A configuração q1a1a11Rq11#q11a11a111Lqf#q11a1a11Rq1$a1A11&q11%a11@a11
     1. **&q11** indica que o estado atual é o q11
@@ -66,7 +75,7 @@
             1. Por exemplo: a máquina está no estado q1 e transita para o estado q111 e é capaz de escrever essa informação sem sobreescrever outras já presentes na fita.
             2. O contrário também ocorre: a máquina está no estado q111 e transita para o estado q1 e é capaz de escrever essa informação sem deixar espaços em branco no meio da fita.
 
-13. **Exemplos de uso:**
+13. **Exemplos de Uso:**
     1.  `q1a1a11Rq11#q11a11a111Lqf$`: Palavra vazia (Rejeitada)
     2.  `q1a1a11Rq11#q11a1a11Lq111#q11a1a11Rq1$a1`: Após leitura da  palavra, para em um estado não final que não possui transição de saída.(Rejeitada)
     3. `q1a1a11Rq11#q11a11a111Lqf#q11a1a11Rq1$a1a11`: Após leitura da  palavra, para em estado final. (Aceita)
