@@ -42,4 +42,4 @@
     2.  `q1a1a11Rq11#q11a1a11Lq111#q11a1a11Rq1$a1`: Após leitura da  palavra, para em estado não final (Rejeitada)
     3. `q1a1a11Rq11#q11a11a111Lqf#q11a1a11Rq1$a1a11`: Após leitura da  palavra, para em estado final (Aceita)
     4.`q11a1a11Rq1#q1a1a11Rq11#q11a11a111Lqf$a1a11`: Mesma máquina e palavra do exemplo 3, mas começando a descrição da máquina em um estado que não seja o inicial. (Aceita)
-	5.`q11a11a111Lqf#q11a1a11Rq1#q1a1a11Rq11$a11`: Ação que não possui transição do estado inicial. (Rejeitada)
+	5.`q11a1a11Lqf#q11a11a111Rq1#q111a1a1Rq11$a11`: Ação que não possui transição do estado inicial. (Rejeitada)
